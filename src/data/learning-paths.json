@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "beginner",
+    "level": "beginner",
+    "title": "新手起步",
+    "subtitle": "0 基础也能 1 小时上手 AI",
+    "emoji": "🌱",
+    "outcomes": [
+      "理解大模型到底能做什么、不能做什么",
+      "学会用一句话问出高质量答案",
+      "把 AI 用进日常写作、查资料、学习里"
+    ],
+    "steps": [
+      {
+        "title": "认识 AI 助手",
+        "detail": "选一个对话助手（ChatGPT / Claude / 豆包）注册，先聊起来，体验它能帮你做什么。"
+      },
+      {
+        "title": "学会清楚地提问",
+        "detail": "掌握『角色 + 任务 + 背景 + 格式』的基本提问结构，让回答更对路。"
+      },
+      {
+        "title": "用进真实场景",
+        "detail": "用 AI 帮你写邮件、总结文章、做学习计划，先把习惯养起来。"
+      }
+    ]
+  },
+  {
+    "slug": "intermediate",
+    "level": "intermediate",
+    "title": "进阶提效",
+    "subtitle": "把 AI 变成你的生产力杠杆",
+    "emoji": "🚀",
+    "outcomes": [
+      "系统掌握提示工程，稳定产出高质量结果",
+      "用 AI 做图、做视频、做 PPT、写代码",
+      "搭出属于自己的第一个工作流 / 智能体"
+    ],
+    "steps": [
+      {
+        "title": "精进提示工程",
+        "detail": "学习少样本、思维链、结构化输出等技巧，跟着官方互动教程动手练。"
+      },
+      {
+        "title": "玩转多模态创作",
+        "detail": "用文生图、文生视频、AI 配音组合起来，完整产出一条内容。"
+      },
+      {
+        "title": "搭建第一个工作流",
+        "detail": "用 Coze / Dify / n8n 把多个步骤串起来，让 AI 自动完成重复任务。"
+      }
+    ]
+  },
+  {
+    "slug": "advanced",
+    "level": "advanced",
+    "title": "高级实战",
+    "subtitle": "构建可落地的 AI 应用与 Agent",
+    "emoji": "🧠",
+    "outcomes": [
+      "理解 RAG、Agent、MCP 的原理与边界",
+      "能基于 API 与框架开发完整 AI 应用",
+      "做模型选型、评测与成本优化的工程决策"
+    ],
+    "steps": [
+      {
+        "title": "吃透核心架构",
+        "detail": "深入 RAG 检索增强、Function Calling、Agent 规划与 MCP 协议。"
+      },
+      {
+        "title": "动手开发应用",
+        "detail": "用 LangChain / Dify 等框架，结合向量库做一个真实可用的 AI 产品。"
+      },
+      {
+        "title": "工程化与优化",
+        "detail": "建立评测体系，做提示与模型迭代、成本与延迟优化，推动落地。"
+      }
+    ]
+  }
+]

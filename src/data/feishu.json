@@ -1,0 +1,49 @@
+{
+  "spaceName": "AI 军团进化论 · 共建知识库",
+  "spaceDesc": "51 人微信社群「AI 军团进化论」共建知识库——一起用 AI 提升效率、探索前沿、构建思维模型、自动化编程。",
+  "spaceUrl": "https://zhidun-ai.feishu.cn/wiki/ELq7wD6zVifVjQkqoLgcDetvnjc",
+  "nodes": [
+    {
+      "emoji": "🗺️",
+      "title": "信息源地图 · 三层 × 4 方向",
+      "url": "https://zhidun-ai.feishu.cn/wiki/O9pnwrvOaiy6VnkMFIucrg95nae",
+      "desc": "按三层 × 4 个方向整理的 AI 信息源地图，系统追踪前沿。"
+    },
+    {
+      "emoji": "🛠️",
+      "title": "工具清单 · 按用途分类",
+      "url": "https://zhidun-ai.feishu.cn/wiki/OFHBwMEwBiQ1iokzZi7c1r2Lncg",
+      "desc": "按用途分类的 AI 工具清单，群成员实测沉淀。"
+    },
+    {
+      "emoji": "🌍",
+      "title": "战场地图 · 群成员真实战场",
+      "url": "https://zhidun-ai.feishu.cn/wiki/MFg9wfoemiNTbXkLudncuk7Anqg",
+      "desc": "群成员真实使用场景，看看大家都用 AI 在干什么。"
+    },
+    {
+      "emoji": "🌐",
+      "title": "优质参考 Wiki · 站在巨人肩上",
+      "url": "https://zhidun-ai.feishu.cn/wiki/Uis6whfMDia0zkkWm88c4K8wnRe",
+      "desc": "精选的优质参考 Wiki 资源合集。"
+    },
+    {
+      "emoji": "📚",
+      "title": "学习路径与攻略 · 新人/中级/高级",
+      "url": "https://zhidun-ai.feishu.cn/wiki/WcplwSn6ziUS27kpZkZcRI1Qnab",
+      "desc": "分新人 / 中级 / 高级三档的 AI 学习路径与攻略。"
+    },
+    {
+      "emoji": "❤️",
+      "title": "AI 共学场",
+      "url": "https://zhidun-ai.feishu.cn/wiki/BzdWwd5QgiVYxHkRjDPc93wBnFU",
+      "desc": "社群共学板块，一起学、一起练、一起进化。"
+    },
+    {
+      "emoji": "🗳️",
+      "title": "选题与投票 · 群成员共建",
+      "url": "https://zhidun-ai.feishu.cn/wiki/FNcgwFi1fimCgEkURm4c8XALnNh",
+      "desc": "群成员共建的选题与投票，决定下一步学什么。"
+    }
+  ]
+}

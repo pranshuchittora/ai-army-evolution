@@ -1,0 +1,40 @@
+# 依赖
+/node_modules
+/.pnp
+.pnp.*
+
+# 构建产物
+/.next/
+/out/
+/build
+*.tsbuildinfo
+next-env.d.ts
+
+# 测试
+/coverage
+
+# 环境变量与密钥（任意层级的 .env 都忽略，但保留 .env.example 模板）
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+
+# 系统与编辑器
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# 部署运行时数据（容器内/服务器上由 bind mount 持久化，不入库；仓库保留种子文件本身）
+# 注意：content/submissions.json 作为种子保留在仓库
+
+# 本地部署私密笔记（含真实服务器信息）
+deploy/*.local.md

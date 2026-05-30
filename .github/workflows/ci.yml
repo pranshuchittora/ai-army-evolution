@@ -1,0 +1,58 @@
+name: CI
+
+# 在向 main 推送以及对 main 发起 / 更新 Pull Request 时运行。
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# 同一分支的新提交会取消进行中的旧任务，节省 CI 资源。
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Lint · Test · Build
+    runs-on: ubuntu-latest
+
+    env:
+      # 站点公开配置：CI 中使用占位 / 默认值，绝不放真实密钥。
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+      NEXT_PUBLIC_SITE_NAME: AI 军团进化论
+      # 可选：百度统计 ID。留空则不加载任何统计脚本。
+      # 如需在 CI 中使用真实值，可在仓库 Settings → Secrets 配置后启用下一行（可选）：
+      # NEXT_PUBLIC_BAIDU_ANALYTICS_ID: ${{ secrets.NEXT_PUBLIC_BAIDU_ANALYTICS_ID }}
+      NEXT_PUBLIC_BAIDU_ANALYTICS_ID: ""
+
+    steps:
+      - name: Checkout 代码
+        uses: actions/checkout@v4
+
+      # pnpm 版本与 package.json 的 packageManager 字段保持一致（锁定 10.28）。
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.28.0
+
+      - name: 安装 Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: 安装依赖（frozen lockfile）
+        run: pnpm install --frozen-lockfile
+
+      - name: 代码检查（Lint）
+        run: pnpm lint
+
+      - name: 单元测试（Test）
+        run: pnpm test
+
+      - name: 生产构建（Build）
+        run: pnpm build

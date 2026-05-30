@@ -1,0 +1,256 @@
+@import "tailwindcss";
+
+/* ============================================================
+   AI 军团进化论 · 设计系统
+   暗色优先 / 渐变品牌色 / 玻璃拟态 / 丝滑交互
+   ============================================================ */
+
+@theme {
+  --color-bg: #07080d;
+  --color-bg-soft: #0c0e16;
+  --color-surface: #11141f;
+  --color-border: #1f2433;
+  --color-foreground: #e8eaf2;
+  --color-muted: #9aa3b8;
+
+  --color-brand: #7c5cff;
+  --color-brand-2: #22d3ee;
+  --color-accent: #f472b6;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "PingFang SC",
+    "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC", "Hiragino Sans GB",
+    sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  --radius-card: 1rem;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* sticky navbar 高 64px，锚点跳转统一避让，避免落点被遮挡 */
+    scroll-padding-top: 5rem;
+    /* 防止移动端横向溢出兜底 */
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(60rem 40rem at 75% -10%, rgba(124, 92, 255, 0.18), transparent 60%),
+      radial-gradient(50rem 40rem at 10% 0%, rgba(34, 211, 238, 0.12), transparent 55%);
+    pointer-events: none;
+  }
+  ::selection {
+    background: rgba(124, 92, 255, 0.35);
+  }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: var(--color-bg); }
+  ::-webkit-scrollbar-thumb {
+    background: #262c3d;
+    border-radius: 999px;
+    border: 2px solid var(--color-bg);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: #343c52; }
+}
+
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  .glass {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+    border: 1px solid var(--color-border);
+    backdrop-filter: blur(12px);
+  }
+
+  .card {
+    border-radius: var(--radius-card);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012));
+    border: 1px solid var(--color-border);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 0.25s, box-shadow 0.25s, background 0.25s;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(124, 92, 255, 0.5);
+    box-shadow: 0 12px 40px -12px rgba(124, 92, 255, 0.35);
+  }
+
+  .brand-text {
+    background: linear-gradient(120deg, var(--color-brand), var(--color-brand-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    padding: 0.7rem 1.3rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(120deg, var(--color-brand), #5b8cff);
+    box-shadow: 0 8px 24px -8px rgba(124, 92, 255, 0.6);
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+    box-shadow: 0 12px 30px -8px rgba(124, 92, 255, 0.7);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    padding: 0.7rem 1.3rem;
+    font-weight: 600;
+    color: var(--color-foreground);
+    border: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.02);
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  }
+  .btn-ghost:hover {
+    border-color: rgba(124, 92, 255, 0.5);
+    background: rgba(124, 92, 255, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border-radius: 999px;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.025);
+    color: var(--color-muted);
+  }
+
+  /* 博客正文排版 —— 轻量、舒适、易读 */
+  .prose-blog {
+    font-size: 1.0625rem;
+    line-height: 1.85;
+    color: #d3d8e6;
+  }
+  .prose-blog > :first-child { margin-top: 0; }
+  .prose-blog h2 {
+    margin-top: 2.4rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    scroll-margin-top: 5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .prose-blog h3 {
+    margin-top: 1.8rem;
+    margin-bottom: 0.7rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .prose-blog p { margin: 1rem 0; }
+  .prose-blog a {
+    color: #a99bff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(124, 92, 255, 0.45);
+  }
+  .prose-blog a:hover { color: #c3b8ff; }
+  .prose-blog strong { color: #fff; font-weight: 650; }
+  .prose-blog ul,
+  .prose-blog ol { margin: 1rem 0; padding-left: 1.4rem; }
+  .prose-blog li { margin: 0.45rem 0; }
+  .prose-blog ul li { list-style: disc; }
+  .prose-blog ol li { list-style: decimal; }
+  .prose-blog blockquote {
+    margin: 1.4rem 0;
+    padding: 0.6rem 1.1rem;
+    border-left: 3px solid var(--color-brand);
+    background: rgba(124, 92, 255, 0.07);
+    border-radius: 0 0.6rem 0.6rem 0;
+    color: var(--color-muted);
+  }
+  .prose-blog code {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    background: rgba(255, 255, 255, 0.07);
+    padding: 0.15em 0.4em;
+    border-radius: 0.35rem;
+    color: #f0a9d0;
+  }
+  .prose-blog pre {
+    margin: 1.4rem 0;
+    padding: 1.1rem 1.3rem;
+    background: #0a0c14;
+    border: 1px solid var(--color-border);
+    border-radius: 0.8rem;
+    overflow-x: auto;
+  }
+  .prose-blog pre code {
+    background: none;
+    padding: 0;
+    color: #c9d1e6;
+    font-size: 0.85rem;
+  }
+  .prose-blog hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid var(--color-border);
+  }
+  /* 表格 —— 对比类文章核心 */
+  .prose-blog table {
+    width: 100%;
+    margin: 1.6rem 0;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    display: block;
+    overflow-x: auto;
+  }
+  .prose-blog thead {
+    background: rgba(124, 92, 255, 0.12);
+  }
+  .prose-blog th,
+  .prose-blog td {
+    border: 1px solid var(--color-border);
+    padding: 0.65rem 0.9rem;
+    text-align: left;
+  }
+  .prose-blog th { color: #fff; font-weight: 600; white-space: nowrap; }
+  .prose-blog tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+  }
+}

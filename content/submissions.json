@@ -1,0 +1,37 @@
+[
+  {
+    "id": "s_seed_lovable",
+    "kind": "tool",
+    "name": "Lovable",
+    "url": "https://lovable.dev",
+    "category": "coding",
+    "description": "用对话生成全栈应用，自带数据库与部署，适合非程序员快速做出能上线的产品。",
+    "submittedBy": "进化论·阿杰",
+    "createdAt": "2026-05-28T09:12:00.000Z",
+    "votes": 18,
+    "status": "approved"
+  },
+  {
+    "id": "s_seed_huggingface",
+    "kind": "resource",
+    "name": "Hugging Face 模型社区",
+    "url": "https://huggingface.co",
+    "description": "全球最大的开源模型与数据集社区，想玩开源模型、找数据集这里都有。",
+    "submittedBy": "匿名军团成员",
+    "createdAt": "2026-05-29T14:30:00.000Z",
+    "votes": 12,
+    "status": "approved"
+  },
+  {
+    "id": "s_seed_notebooklm",
+    "kind": "tool",
+    "name": "NotebookLM",
+    "url": "https://notebooklm.google.com",
+    "category": "productivity",
+    "description": "上传资料就能问答、生成摘要，甚至生成播客式音频概览，做学习笔记神器。",
+    "submittedBy": "进化论·小鹿",
+    "createdAt": "2026-05-30T02:05:00.000Z",
+    "votes": 9,
+    "status": "approved"
+  }
+]

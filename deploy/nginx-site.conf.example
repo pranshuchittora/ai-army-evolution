@@ -1,0 +1,49 @@
+# ============================================================
+#  前置 Nginx 站点配置模板
+#  用法：把 __SITE_DOMAIN__ 和 __APP_HOST_PORT__ 替换为你的实际值，
+#        放入 Nginx 的 conf.d/ 或 sites-available/（软链到 sites-enabled/），
+#        再 nginx -t && nginx -s reload。
+#  仅新增本站，切勿改动服务器上其它站点配置。
+# ============================================================
+
+# HTTP：处理 ACME 验证 + 跳转 HTTPS
+server {
+    listen 80;
+    server_name __SITE_DOMAIN__;
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/html;          # 与 certbot --webroot 的 -w 路径一致
+    }
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+# HTTPS：反代到本应用容器
+server {
+    listen 443 ssl;
+    server_name __SITE_DOMAIN__;
+
+    ssl_certificate     /etc/letsencrypt/live/__SITE_DOMAIN__/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/__SITE_DOMAIN__/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+    ssl_prefer_server_ciphers on;
+
+    client_max_body_size 16M;
+    proxy_read_timeout 600s;
+    proxy_send_timeout 600s;
+    proxy_connect_timeout 30s;
+
+    location / {
+        proxy_pass http://127.0.0.1:__APP_HOST_PORT__;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+}

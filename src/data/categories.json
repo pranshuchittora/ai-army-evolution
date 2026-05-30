@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "chat",
+    "name": "对话助手",
+    "emoji": "💬",
+    "description": "通用大模型与聊天助手，日常问答、写作、分析的主力入口。",
+    "gradient": "from-violet-500 to-indigo-500"
+  },
+  {
+    "slug": "coding",
+    "name": "编程开发",
+    "emoji": "⌨️",
+    "description": "AI 编程助手与全栈生成工具，让写代码、改 bug、做产品快十倍。",
+    "gradient": "from-sky-500 to-cyan-500"
+  },
+  {
+    "slug": "image",
+    "name": "图像生成",
+    "emoji": "🎨",
+    "description": "文生图、改图、设计素材，创意从一句话开始。",
+    "gradient": "from-pink-500 to-rose-500"
+  },
+  {
+    "slug": "video",
+    "name": "视频生成",
+    "emoji": "🎬",
+    "description": "文生视频、图生视频、数字人，内容创作的新生产力。",
+    "gradient": "from-orange-500 to-amber-500"
+  },
+  {
+    "slug": "audio",
+    "name": "语音音乐",
+    "emoji": "🎵",
+    "description": "配音、克隆音色、AI 作曲，声音内容一键生成。",
+    "gradient": "from-emerald-500 to-teal-500"
+  },
+  {
+    "slug": "agent",
+    "name": "智能体 / 工作流",
+    "emoji": "🤖",
+    "description": "Agent 平台与自动化工作流，把任务交给 AI 自己跑完。",
+    "gradient": "from-fuchsia-500 to-purple-500"
+  },
+  {
+    "slug": "productivity",
+    "name": "效率办公",
+    "emoji": "⚡",
+    "description": "做 PPT、做笔记、做图表、开会纪要，办公提速利器。",
+    "gradient": "from-blue-500 to-indigo-500"
+  },
+  {
+    "slug": "writing",
+    "name": "写作内容",
+    "emoji": "✍️",
+    "description": "营销文案、长文写作、润色改稿，内容生产流水线。",
+    "gradient": "from-lime-500 to-green-500"
+  },
+  {
+    "slug": "search",
+    "name": "搜索研究",
+    "emoji": "🔍",
+    "description": "AI 搜索与深度研究，带引用的答案胜过十页链接。",
+    "gradient": "from-cyan-500 to-blue-500"
+  },
+  {
+    "slug": "design",
+    "name": "设计创意",
+    "emoji": "🖌️",
+    "description": "UI、海报、品牌设计，AI 帮你从灵感到成品。",
+    "gradient": "from-rose-500 to-pink-500"
+  }
+]

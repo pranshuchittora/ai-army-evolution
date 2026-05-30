@@ -1,0 +1,422 @@
+[
+  {
+    "id": "openai-quickstart",
+    "title": "OpenAI 官方使用指南",
+    "description": "从 ChatGPT 基础到 API、function calling 的官方文档，第一手、最权威。",
+    "url": "https://platform.openai.com/docs",
+    "type": "doc",
+    "level": "beginner",
+    "topic": "大模型基础",
+    "free": true
+  },
+  {
+    "id": "anthropic-docs",
+    "title": "Anthropic / Claude 开发文档",
+    "description": "Claude 模型用法、提示工程、工具调用、Agent 构建的系统文档。",
+    "url": "https://docs.anthropic.com",
+    "type": "doc",
+    "level": "intermediate",
+    "topic": "大模型基础",
+    "free": true
+  },
+  {
+    "id": "prompt-eng-guide",
+    "title": "Prompt Engineering Guide",
+    "description": "覆盖各类提示词技巧的开源指南，从零基础到进阶，有中文版，由 DAIR.AI 维护。",
+    "url": "https://www.promptingguide.ai/zh",
+    "type": "doc",
+    "level": "beginner",
+    "topic": "提示工程",
+    "free": true
+  },
+  {
+    "id": "learn-prompting",
+    "title": "Learn Prompting",
+    "description": "面向初学者的系统提示工程课程，结构清晰、循序渐进，支持多语言。",
+    "url": "https://learnprompting.org",
+    "type": "course",
+    "level": "beginner",
+    "topic": "提示工程",
+    "free": true
+  },
+  {
+    "id": "anthropic-prompt-course",
+    "title": "Anthropic 提示工程互动教程",
+    "description": "官方出品的动手 Notebook 教程，跟着练就能掌握高质量 Claude 提示词写法。",
+    "url": "https://github.com/anthropics/prompt-eng-interactive-tutorial",
+    "type": "course",
+    "level": "intermediate",
+    "topic": "提示工程",
+    "free": true
+  },
+  {
+    "id": "andrew-ng-genai",
+    "title": "吴恩达《面向所有人的生成式 AI》",
+    "description": "DeepLearning.AI 出品，用通俗语言讲清生成式 AI 全貌，零基础首选。",
+    "url": "https://www.deeplearning.ai/courses/generative-ai-for-everyone/",
+    "type": "course",
+    "level": "beginner",
+    "topic": "大模型基础",
+    "free": true
+  },
+  {
+    "id": "deeplearning-short",
+    "title": "DeepLearning.AI 短课合集",
+    "description": "与各大厂商合作的免费短课，涵盖 RAG、Agent、微调等热门主题，每门约 1 小时。",
+    "url": "https://www.deeplearning.ai/short-courses/",
+    "type": "course",
+    "level": "intermediate",
+    "topic": "应用开发",
+    "free": true
+  },
+  {
+    "id": "chatgpt-prompt-eng-devs",
+    "title": "吴恩达《面向开发者的 ChatGPT 提示工程》",
+    "description": "吴恩达与 OpenAI 合作出品，用代码实例讲解 API 调用与提示技巧，开发者必学。",
+    "url": "https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/",
+    "type": "course",
+    "level": "intermediate",
+    "topic": "提示工程",
+    "free": true
+  },
+  {
+    "id": "karpathy-llm",
+    "title": "Karpathy：大语言模型入门",
+    "description": "前特斯拉 AI 总监的硬核科普视频，深入浅出讲解 LLM 原理，想真正理解模型必看。",
+    "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g",
+    "type": "video",
+    "level": "intermediate",
+    "topic": "大模型基础",
+    "free": true
+  },
+  {
+    "id": "karpathy-makemore",
+    "title": "Karpathy：从零构建 GPT（Neural Networks: Zero to Hero）",
+    "description": "手把手从零用 PyTorch 实现神经网络到 Transformer，代码驱动，深入原理。",
+    "url": "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ",
+    "type": "video",
+    "level": "advanced",
+    "topic": "模型与微调",
+    "free": true
+  },
+  {
+    "id": "langchain-docs",
+    "title": "LangChain 官方文档",
+    "description": "最流行的 LLM 应用开发框架，构建 RAG 与 Agent 的事实标准之一，Python/JS 双版本。",
+    "url": "https://python.langchain.com",
+    "type": "doc",
+    "level": "advanced",
+    "topic": "应用开发",
+    "free": true
+  },
+  {
+    "id": "mcp-docs",
+    "title": "MCP 模型上下文协议",
+    "description": "连接 AI 与外部工具/数据的开放协议，理解新一代 Agent 生态的关键，附官方 SDK。",
+    "url": "https://modelcontextprotocol.io",
+    "type": "doc",
+    "level": "advanced",
+    "topic": "Agent开发",
+    "free": true
+  },
+  {
+    "id": "hf-course",
+    "title": "Hugging Face 课程",
+    "description": "从 Transformer 到微调、扩散模型的系统课程，开源 AI 的入门殿堂。",
+    "url": "https://huggingface.co/learn",
+    "type": "course",
+    "level": "advanced",
+    "topic": "模型与微调",
+    "free": true
+  },
+  {
+    "id": "datawhale",
+    "title": "Datawhale 开源学习社区",
+    "description": "国内知名 AI 开源学习社区，《动手学大模型》等中文教程质量高，适合中文学习者。",
+    "url": "https://github.com/datawhalechina",
+    "type": "community",
+    "level": "intermediate",
+    "topic": "社区交流",
+    "free": true
+  },
+  {
+    "id": "reddit-localllama",
+    "title": "r/LocalLLaMA 社区",
+    "description": "本地部署与开源模型最活跃的 Reddit 社区，实战经验与第一手测评聚集地。",
+    "url": "https://www.reddit.com/r/LocalLLaMA/",
+    "type": "community",
+    "level": "advanced",
+    "topic": "社区交流",
+    "free": true
+  },
+  {
+    "id": "elvis-newsletter",
+    "title": "DAIR.AI 周报",
+    "description": "每周精选 AI 论文与进展，紧跟前沿的高质量 newsletter，由 Elvis Saravia 主理。",
+    "url": "https://nlp.elvissaravia.com",
+    "type": "newsletter",
+    "level": "advanced",
+    "topic": "前沿追踪",
+    "free": true
+  },
+  {
+    "id": "rundown",
+    "title": "The Rundown AI",
+    "description": "每日 AI 资讯 newsletter，五分钟掌握行业动态，适合保持信息更新的入门用户。",
+    "url": "https://www.therundown.ai",
+    "type": "newsletter",
+    "level": "beginner",
+    "topic": "前沿追踪",
+    "free": true
+  },
+  {
+    "id": "openai-cookbook",
+    "title": "OpenAI Cookbook",
+    "description": "OpenAI 官方维护的代码示例集合，涵盖嵌入、函数调用、RAG 等高频应用场景。",
+    "url": "https://cookbook.openai.com",
+    "type": "doc",
+    "level": "intermediate",
+    "topic": "应用开发",
+    "free": true
+  },
+  {
+    "id": "anthropic-cookbook",
+    "title": "Anthropic Cookbook",
+    "description": "Anthropic 官方示例代码仓库，展示 Claude API 的各类高级用法与最佳实践。",
+    "url": "https://github.com/anthropics/anthropic-cookbook",
+    "type": "doc",
+    "level": "intermediate",
+    "topic": "应用开发",
+    "free": true
+  },
+  {
+    "id": "fastai-course",
+    "title": "fast.ai 深度学习实战课",
+    "description": "Jeremy Howard 主讲，自顶向下学习深度学习，强调实践优先，免费且高质量。",
+    "url": "https://course.fast.ai",
+    "type": "course",
+    "level": "intermediate",
+    "topic": "模型与微调",
+    "free": true
+  },
+  {
+    "id": "3b1b-nn",
+    "title": "3Blue1Brown：神经网络系列",
+    "description": "用精美动画直观解释神经网络与反向传播原理，数学可视化领域的标杆内容。",
+    "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi",
+    "type": "video",
+    "level": "beginner",
+    "topic": "大模型基础",
+    "free": true
+  },
+  {
+    "id": "google-ml-crash",
+    "title": "Google 机器学习速成课程",
+    "description": "Google 出品的免费 ML 入门课，含实操练习，适合想系统了解 AI 基础的初学者。",
+    "url": "https://developers.google.com/machine-learning/crash-course",
+    "type": "course",
+    "level": "beginner",
+    "topic": "大模型基础",
+    "free": true
+  },
+  {
+    "id": "ms-ai-beginners",
+    "title": "微软 AI for Beginners",
+    "description": "微软开源的 12 周 AI 入门课程，涵盖传统 ML 到神经网络，附配套代码。",
+    "url": "https://microsoft.github.io/AI-For-Beginners/",
+    "type": "course",
+    "level": "beginner",
+    "topic": "大模型基础",
+    "free": true
+  },
+  {
+    "id": "llamaindex-docs",
+    "title": "LlamaIndex 官方文档",
+    "description": "专为 RAG 和数据增强 LLM 应用设计的框架，适合构建知识库问答系统的开发者。",
+    "url": "https://docs.llamaindex.ai",
+    "type": "doc",
+    "level": "advanced",
+    "topic": "RAG",
+    "free": true
+  },
+  {
+    "id": "lex-fridman",
+    "title": "Lex Fridman Podcast（AI 专题）",
+    "description": "与 Hinton、LeCun、Karpathy 等 AI 顶尖人物的深度访谈，了解 AI 大佬思想的窗口。",
+    "url": "https://lexfridman.com/podcast/",
+    "type": "video",
+    "level": "beginner",
+    "topic": "前沿追踪",
+    "free": true
+  },
+  {
+    "id": "two-minute-papers",
+    "title": "Two Minute Papers",
+    "description": "用两分钟视频解读最新 AI 论文，轻松追踪前沿研究，适合保持学术视野。",
+    "url": "https://www.youtube.com/@TwoMinutePapers",
+    "type": "video",
+    "level": "intermediate",
+    "topic": "前沿追踪",
+    "free": true
+  },
+  {
+    "id": "d2l-ai",
+    "title": "动手学深度学习（d2l.ai）",
+    "description": "李沐等人编著的交互式深度学习教材，中英文均有，理论与代码并重，系统全面。",
+    "url": "https://zh.d2l.ai",
+    "type": "course",
+    "level": "advanced",
+    "topic": "模型与微调",
+    "free": true
+  },
+  {
+    "id": "cs224n",
+    "title": "斯坦福 CS224n：自然语言处理与深度学习",
+    "description": "斯坦福顶级 NLP 课程，覆盖 Transformer、大模型等核心内容，有配套讲义和作业。",
+    "url": "https://web.stanford.edu/class/cs224n/",
+    "type": "course",
+    "level": "advanced",
+    "topic": "模型与微调",
+    "free": true
+  },
+  {
+    "id": "fullstack-llm",
+    "title": "Full Stack LLM Bootcamp",
+    "description": "面向工程师的 LLM 应用全栈开发课程，从提示到部署，贴近工业实践。",
+    "url": "https://fullstackdeeplearning.com/llm-bootcamp/",
+    "type": "course",
+    "level": "intermediate",
+    "topic": "应用开发",
+    "free": true
+  },
+  {
+    "id": "latent-space",
+    "title": "Latent Space 播客",
+    "description": "专注 AI 工程师视角的英文播客，深入探讨 LLM 技术实现与行业趋势。",
+    "url": "https://www.latent.space/podcast",
+    "type": "community",
+    "level": "advanced",
+    "topic": "前沿追踪",
+    "free": true
+  },
+  {
+    "id": "rag-techniques",
+    "title": "RAG 技术大全",
+    "description": "开源项目，系统整理各种检索增强生成技巧，附可运行代码，适合进阶实践。",
+    "url": "https://github.com/NirDiamant/RAG_Techniques",
+    "type": "doc",
+    "level": "advanced",
+    "topic": "RAG",
+    "free": true
+  },
+  {
+    "id": "lmsys-arena",
+    "title": "LMSYS Chatbot Arena",
+    "description": "多模型盲测对比排行榜，直观了解各大模型真实能力，适合选模型时参考。",
+    "url": "https://lmarena.ai",
+    "type": "community",
+    "level": "beginner",
+    "topic": "前沿追踪",
+    "free": true
+  },
+  {
+    "id": "simon-willison-blog",
+    "title": "Simon Willison's Weblog",
+    "description": "Django 联合创始人的 AI 实验博客，大量 LLM 工程实践笔记，更新频繁干货多。",
+    "url": "https://simonwillison.net",
+    "type": "article",
+    "level": "intermediate",
+    "topic": "应用开发",
+    "free": true
+  },
+  {
+    "id": "ai-alignment-forum",
+    "title": "AI Alignment Forum",
+    "description": "AI 安全与对齐方向最权威的学术讨论社区，适合关注 AI 安全与治理的研究者。",
+    "url": "https://www.alignmentforum.org",
+    "type": "community",
+    "level": "advanced",
+    "topic": "前沿追踪",
+    "free": true
+  },
+  {
+    "id": "microsoft-semantic-kernel",
+    "title": "微软 Semantic Kernel 文档",
+    "description": "微软开源的企业级 AI 编排 SDK，适合在 .NET/Python/Java 中构建 Agent 应用。",
+    "url": "https://learn.microsoft.com/zh-cn/semantic-kernel/overview/",
+    "type": "doc",
+    "level": "advanced",
+    "topic": "Agent开发",
+    "free": true
+  },
+  {
+    "id": "huggingface-agents",
+    "title": "Hugging Face Agent 课程",
+    "description": "系统讲解 AI Agent 构建原理与工具，涵盖 smolagents、LangGraph 等主流框架。",
+    "url": "https://huggingface.co/learn/agents-course/unit0/introduction",
+    "type": "course",
+    "level": "intermediate",
+    "topic": "Agent开发",
+    "free": true
+  },
+  {
+    "id": "paperswithcode",
+    "title": "Papers With Code",
+    "description": "汇聚机器学习论文与对应代码实现，便于追踪 SOTA 进展和复现经典工作。",
+    "url": "https://paperswithcode.com",
+    "type": "community",
+    "level": "advanced",
+    "topic": "前沿追踪",
+    "free": true
+  },
+  {
+    "id": "china-llm-survey",
+    "title": "大语言模型综述（中文版）",
+    "description": "系统梳理大语言模型发展历程、技术原理与应用方向的中文综述文章，适合建立体系。",
+    "url": "https://github.com/RUCAIBox/LLMSurvey",
+    "type": "article",
+    "level": "intermediate",
+    "topic": "大模型基础",
+    "free": true
+  },
+  {
+    "id": "openai-gym-spinningup",
+    "title": "OpenAI Spinning Up（强化学习入门）",
+    "description": "OpenAI 出品的强化学习入门教程，适合想了解 RLHF 与 AI 对齐底层原理的学习者。",
+    "url": "https://spinningup.openai.com",
+    "type": "course",
+    "level": "advanced",
+    "topic": "模型与微调",
+    "free": true
+  },
+  {
+    "id": "weights-biases-course",
+    "title": "Weights & Biases LLM 工程课程",
+    "description": "W&B 出品的 LLM 应用课，覆盖评估、微调与实验追踪，附实操代码，免费注册可学。",
+    "url": "https://www.wandb.courses/courses/building-llm-powered-apps",
+    "type": "course",
+    "level": "intermediate",
+    "topic": "应用开发",
+    "free": true
+  },
+  {
+    "id": "zhihu-ai-column",
+    "title": "知乎「AI 与大模型」专栏精选",
+    "description": "中文社区中关于 AI 与大模型的优质回答与文章集合，适合中文用户快速了解热点。",
+    "url": "https://www.zhihu.com/topic/19551424",
+    "type": "article",
+    "level": "beginner",
+    "topic": "大模型基础",
+    "free": true
+  },
+  {
+    "id": "lil-log",
+    "title": "Lilian Weng 博客（lil'log）",
+    "description": "OpenAI 前研究主管的个人博客，深度剖析 Transformer、Agent、扩散模型等核心架构。",
+    "url": "https://lilianweng.github.io",
+    "type": "article",
+    "level": "advanced",
+    "topic": "模型与微调",
+    "free": true
+  }
+]

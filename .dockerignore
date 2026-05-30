@@ -1,0 +1,10 @@
+node_modules
+.next
+.git
+.DS_Store
+*.command
+*.log
+npm-debug.log*
+.vscode
+.idea
+README-deploy.md

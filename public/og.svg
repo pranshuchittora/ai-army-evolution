@@ -1,0 +1,42 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI 军团进化论 · AI 工具导航与学习社群">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0c0e16"/>
+      <stop offset="1" stop-color="#07080d"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientTransform="translate(960 -40) rotate(120) scale(560)">
+      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientTransform="translate(120 60) rotate(60) scale(520)">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="brand" x1="120" y1="280" x2="900" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7c5cff"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="120" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7c5cff"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <g transform="translate(96 96)">
+    <path d="M60 0 L120 22 V78 C120 116 94 142 60 156 C26 142 0 116 0 78 V22 Z"
+          fill="url(#shield)" opacity="0.16"/>
+    <path d="M60 0 L120 22 V78 C120 116 94 142 60 156 C26 142 0 116 0 78 V22 Z"
+          fill="none" stroke="url(#shield)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M60 36 L86 116 H34 Z M34 116 L20 144 H100 L86 116"
+          fill="none" stroke="url(#shield)" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+
+  <text x="96" y="350" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="118" font-weight="800" fill="url(#brand)" letter-spacing="2">AI 军团进化论</text>
+  <text x="100" y="430" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="44" font-weight="500" fill="#e8eaf2">AI 工具导航 · 学习社群</text>
+  <text x="100" y="492" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="30" font-weight="400" fill="#9aa3b8">精选 AI 工具 · 提示工程 · Agent · 大模型 · 从新手到高级</text>
+
+  <text x="100" y="566" font-family="ui-monospace, Menlo, monospace" font-size="26" font-weight="500" fill="#22d3ee">superman.zhidun-ai.com</text>
+</svg>
