@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { addSubmission, readSubmissions } from "@/lib/db";
 import { rateLimit } from "@/lib/rate-limit";
+import { getClientIp, readJsonLimited } from "@/lib/request";
 
 // 文件数据库需要 Node 运行时，避免 Edge
 export const runtime = "nodejs";
@@ -11,18 +12,6 @@ const MAX_NAME = 60;
 const MAX_DESCRIPTION = 300;
 const MAX_SUBMITTED_BY = 30;
 const MAX_CATEGORY = 40;
-
-// 从请求头取客户端 IP：优先 x-forwarded-for 第一个，回退 x-real-ip。
-function getClientIp(request: Request): string {
-  const forwarded = request.headers.get("x-forwarded-for");
-  if (forwarded) {
-    const first = forwarded.split(",")[0]?.trim();
-    if (first) return first;
-  }
-  const real = request.headers.get("x-real-ip");
-  if (real) return real.trim();
-  return "unknown";
-}
 
 // 基础净化：去除尖括号，防御存储型 XSS（纵深防御，React 渲染本身也会转义）。
 function sanitize(value: string): string {
@@ -46,12 +35,9 @@ export async function POST(request: Request) {
     );
   }
 
-  let body: Record<string, unknown>;
-  try {
-    body = await request.json();
-  } catch {
-    return NextResponse.json({ error: "请求体不是合法 JSON" }, { status: 400 });
-  }
+  const parsed = await readJsonLimited(request);
+  if (parsed.error) return parsed.error;
+  const body = parsed.data;
 
   const name = sanitize(String(body.name ?? ""));
   const url = String(body.url ?? "").trim();

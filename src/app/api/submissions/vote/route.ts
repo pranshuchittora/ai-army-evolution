@@ -1,21 +1,10 @@
 import { NextResponse } from "next/server";
 import { voteSubmission } from "@/lib/db";
 import { rateLimit } from "@/lib/rate-limit";
+import { getClientIp, readJsonLimited } from "@/lib/request";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-
-// 从请求头取客户端 IP：优先 x-forwarded-for 第一个，回退 x-real-ip。
-function getClientIp(request: Request): string {
-  const forwarded = request.headers.get("x-forwarded-for");
-  if (forwarded) {
-    const first = forwarded.split(",")[0]?.trim();
-    if (first) return first;
-  }
-  const real = request.headers.get("x-real-ip");
-  if (real) return real.trim();
-  return "unknown";
-}
 
 export async function POST(request: Request) {
   const ip = getClientIp(request);
@@ -31,13 +20,9 @@ export async function POST(request: Request) {
     );
   }
 
-  let body: { id?: string };
-  try {
-    body = await request.json();
-  } catch {
-    return NextResponse.json({ error: "请求体不是合法 JSON" }, { status: 400 });
-  }
-  const id = String(body.id ?? "");
+  const parsed = await readJsonLimited<{ id?: string }>(request);
+  if (parsed.error) return parsed.error;
+  const id = String(parsed.data.id ?? "");
   if (!id) {
     return NextResponse.json({ error: "缺少 id" }, { status: 400 });
   }
