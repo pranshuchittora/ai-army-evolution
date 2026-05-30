@@ -34,7 +34,9 @@ ENV HOSTNAME=0.0.0.0
 RUN addgroup -g 1001 -S nodejs && adduser -S nextjs -u 1001
 
 # standalone 运行所需的最小文件
-COPY --from=builder /app/public ./public
+# 注意：必须 --chown，否则 public 里的文件保留构建层的 root:600 权限，
+# 非 root 的 nextjs 用户无法读取，访问静态资源（如二维码图）会 500。
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 # 文件数据库种子（生产环境用 bind mount 覆盖以持久化）
