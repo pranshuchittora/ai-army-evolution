@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { COMMUNITY } from "@/lib/config";
 
@@ -61,8 +60,8 @@ export function JoinCommunity() {
               <div className="mt-6 rounded-xl border border-[var(--color-border)] bg-white/[0.02] p-4 text-sm">
                 <p className="text-[var(--color-muted)]">
                   群满 200 人或二维码过期？加 Bill 个人微信，备注
-                  <span className="text-white">「AI 军团进化论 + 你的来意」</span>
-                  ，拉你进群 👇
+                  <span className="text-white">「AI 军团进化论 + 你的名称 + 所在行业」</span>
+                  （方便大家互相认识、彼此学习），拉你进群 👇
                 </p>
                 <div className="mt-3 flex items-center gap-3">
                   <code className="rounded-lg bg-[var(--color-surface)] px-3 py-1.5 font-mono text-[var(--color-brand-2)]">
@@ -83,11 +82,13 @@ export function JoinCommunity() {
           <div className="group/qr mx-auto flex flex-col items-center">
             <div className="relative">
               <div className="overflow-hidden rounded-2xl border border-[var(--color-border)] bg-white p-3 shadow-xl transition-transform duration-300 ease-out group-hover/qr:scale-[1.04]">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={groupQrImage}
                   alt="AI 军团进化论 · 微信群二维码"
-                  width={200}
-                  height={200}
+                  width={208}
+                  height={208}
+                  loading="lazy"
                   className="h-44 w-44 object-contain sm:h-52 sm:w-52"
                 />
               </div>
@@ -95,11 +96,12 @@ export function JoinCommunity() {
               {/* 悬浮放大层（桌面端） */}
               <div className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-3 hidden -translate-x-1/2 opacity-0 transition-all duration-300 group-hover/qr:opacity-100 md:block">
                 <div className="rounded-2xl border border-[var(--color-border)] bg-white p-4 shadow-2xl shadow-black/50">
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={groupQrImage}
                     alt="AI 军团进化论 · 微信群二维码（放大）"
-                    width={320}
-                    height={320}
+                    width={288}
+                    height={288}
                     className="h-72 w-72 object-contain"
                   />
                   <p className="mt-2 text-center text-xs text-neutral-500">
